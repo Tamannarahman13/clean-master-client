@@ -52,11 +52,21 @@ const Navbar = ({ children }) => {
             <div className="drawer-side">
                 <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 bg-base-100">
-                    <li><Link className='rounded-lg'>Home</Link></li>
-                    <li><Link className='rounded-lg'>About</Link></li>
-                    <li><Link className='rounded-lg'>Services</Link></li>
-                    <li><Link className='rounded-lg'>Contact</Link></li>
-                    <li><Link className='rounded-lg'>Login</Link></li>
+                    <li><NavLink to='/' className='rounded-lg'>Home</NavLink></li>
+                    <li><NavLink to='/about' className='rounded-lg'>About</NavLink></li>
+                    <li><NavLink to='/services' className='rounded-lg'>Services</NavLink></li>
+                    <li><NavLink to='/contact' className='rounded-lg'>Contact</NavLink></li>
+                    <li><NavLink to='/login' className='rounded-lg'>Login</NavLink></li>
+
+                    <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+                        <div className="collapse-title text-xl font-medium">
+                            Book Now
+                        </div>
+                        <div className="collapse-content">
+                            <li><NavLink to='/contact' className='rounded-lg'>Quick Book</NavLink></li>
+                            <li><NavLink to='/login' className='rounded-lg'>Free Book</NavLink></li>
+                        </div>
+                    </div>
 
                 </ul>
 
